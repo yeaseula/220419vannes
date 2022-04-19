@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VANESSDECO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=IBM+Plex+Sans+KR:wght@300&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@167&family=My+Soul&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&family=Lexend+Tera:wght@167&family=My+Soul&display=swap" rel="stylesheet">
+
+
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+<style>
+     * {box-sizing:border-box; margin:0;}
+     ul, li, p, h1, h2, h3, h4, h5, h6 {font-family: 'Gothic A1', sans-serif;}
+
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@167&family=My+Soul&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&family=Lexend+Tera:wght@167&family=My+Soul&display=swap');
+
+    #sub {width: 1100px; height: 695px; margin: 0 auto; }
+
+
+    #submenu {width: 100%; height: 60px; }
+    #submenu > ul {font-size: 15px;}
+    #submenu > ul > li {float: left; color: #333; padding: 26px 15px 0 0px;}
+    #submenu > ul > li > a {color: #333;}
+    
+
+    #salepage {width: 100%; height: 670px; position: relative;}
+    #salepage h3 {font-size: 25px;}
+
+    /*왼쪽박스-이미지*/
+
+    #productimg {width: 500px; height: 580px; position: absolute; top: 14px; left: 30px; text-align: center;}
+    #productimg img {width: 455px; height: 390px; }
+    #productimg p {font-size: 18px; font-family: 'Lexend Tera', sans-serif; margin: 10px 0 8px 0px; font-weight: 700;}
+   
+   /*왼쪽박스 하단 디테일 이미지들*/
+    #productimg > #smalling {width: 500px; height: 150px; position: absolute; bottom: 0px; left: 0px;}
+
+    #productimg > #smalling > .detail {width: 145px; height: 145px; display: inline-block;}
+    #productimg > #smalling > .detail > a > img {width: 100%; height: 100%; opacity: 1;}
+    #productimg > #smalling > .detail > a > img:hover {opacity: 0.6;}
+
+    #smalling > div:first-of-type {margin: 0 0 0 3px;}
+    #smalling > div:nth-of-type(2) {margin: 0 0 0 5px;}
+    #smalling > div:last-of-type {margin: 0 0 0 4px;}
+
+    /*오른쪽박스-상품정보와 옵션*/
+
+    #text {width: 450px; height: 580px; position: absolute; top: 14px; right: 30px; }
+    #text h4 {font-size: 15px;}
+    #text h3 {font-size: 25px; padding: 8px 0px 20px 0px;}
+    #text p {border-top: 4px solid #eee; padding: 10px 0 0 0px; font-weight: 600;}
+
+    #text #price {width: 450px; height: 70px;}
+    #text #price h1 {font-size: 28px; display: inline-block;  float: left;}
+    #text #price h1:before {content: "40%"; color:orangered; padding: 0 15px 0 0px;}
+
+    #text #price .coupon {height: 24px; width: 70px; font-size: 11px; float:none; margin: 25px 0 0 10px; border: none; background-color: blanchedalmond ; color: #333;}
+
+    /*첫번째 테이블*/
+
+    .table1 {width: 100%; border-top: 1px solid #eee; border-bottom: 1px solid #eee;}
+    .table1 td:first-child {width: 120px;}
+    .table1 td {padding: 13px;}
+
+    /*두번째 테이블 수량 컬러 선택옵션*/
+
+    .table2 {width: 100%; border-bottom: 1px solid #eee; }
+    .table2 td:first-child {width: 120px;}
+    .table2 td {padding: 14px; }
+
+    /*버튼*/
+
+    .bt1 {margin: 8px 0px; border: none; background-color: orangered; color: #fff; width: 130px; height: 45px; margin: 29px 0 0 12px; opacity: 1;}
+    .bt2 {margin: 8px 0px; border: none; background-color: beige; color: #555; width: 130px; height: 45px; margin: 29px 0 0 1px; opacity: 1; }
+    .bt3 {margin: 8px 0px; border: none; background-color:burlywood; color: #fff; width: 152px; height: 45px; margin: 29px 0 0 1px; opacity: 1;}
+
+    .bt1:hover {opacity: 0.6;}
+    .bt2:hover {opacity: 0.6;}
+    .bt3:hover {opacity: 0.6;}
+
+    /*다른 상품들*/
+
+    #other {width: 1100px; height: 350px; margin: 0 auto; text-align: center; border: 4px solid wheat;}
+    #other h2 {padding: 18px 0 0 0px; font-weight: 600;}
+    #other > p {font-size: 15px; margin: 12px 0px 20px 0px; color: #555;}
+    .other1 {width: 195px; height: 220px; display: inline-block;}
+    .other1 > p {font-size: 13px;}
+    .other1 a img {width: 195px; height: 195px; opacity: 1;}
+    .other1 a img:hover {opacity: 0.6;}
+
+    /*본문 시작 전*/
+
+    #midmenu {width: 1100px; height: 60px; background-color: darkgrey; margin: 0 auto;}
+    #midmenu > ul {font-size: 22px;}
+    #midmenu > ul > li {float: left; padding: 20px 0 0 150px; }
+
+
+    /*섹션*/
+
+    .section1 {width: 1100px; height: 500px; background-color: violet; margin: 0 auto;}
+    .section2 {width: 1100px; height: 500px; background-color: brown; margin: 0 auto;}
+    .section3 {width: 1100px; height: 500px; background-color: wheat; margin: 0 auto;}
+    .section4 {width: 1100px; height: 360px; background-color: darkcyan; margin: 0 auto;}
+    .section5 {width: 1100px; height: 360px; background-color: violet; margin: 0 auto;}
+    
+
+  
+   
+
+
+</style>    
+    
+
+</head>
+
+
+
+<body>
+
+<!----헤더-----> 
+    
+    <header>
+        <div id="logo">
+            <img src="img/logo.JPG" alt="logo">
+
+        </div>
+
+        <div class="nav1">
+            <ul>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">타임특가</a></li>
+                <li><a href="#">핫딜</a></li>
+                <li><a href="#">리퍼세일</a></li>
+            </ul>
+
+        </div>
+
+        <div id="login">
+            <div class="icon">
+                <a href="#"><img src="img/icon1.JPG"alt="icon1"></a>
+
+            </div>
+            <div class="icon">
+                <a href="#"><img src="img/icon2.JPG" alt="icon2"></a>
+            </div>
+            <div class="icon">
+                <a href="#"><img src="img/icon3.JPG" alt="icon3"></a>
+            </div>
+        </div>
+        
+    </header>
+     <hr>
+     <div class="nav2">
+        <ul>
+            <li><a href="#">침실</a></li>
+            <li><a href="#">매트리스</a></li>
+            <li><a href="#">거실</a></li>
+            <li><a href="#">주방</a></li>
+            <li><a href="#">서재</a></li>
+            <li><a href="#">수납</a></li>
+            <li><a href="#">의자</a></li>
+            <li><a href="#">홈데코</a></li>
+            <li><a href="#">생활용품</a></li>
+        </ul>
+
+
+     </div>
+     
+<!--제품 구매 상세페이지-->
+
+    <div id="sub">
+        <div id="submenu">
+            <ul>
+                <li><a href="#">홈데코</a></li>
+                <li> > </li>
+                <li><a href="#">테이블</a></li>
+                <li> > </li>
+                <li><a href="#">원목</a></li>
+
+            </ul>
+        </div>
+
+
+        <div id="salepage">
+            
+
+<!--왼쪽박스-->            
+
+            <div id="productimg">
+                <img src="img/product.JPG" alt="product">
+                <p>Best photo review</p>
+                <div id="smalling">
+                    <div class="detail">
+                        <a href="#"><img src="img/detail1.JPG" alt="detail1"></a>
+                    </div>
+                    <div class="detail">
+                        <a href="#"><img src="img/detail2.JPG" alt="detail2"></a>
+                    </div>
+                    <div class="detail">
+                        <a href="#"><img src="img/detail3.JPG" alt="detail3"></a>
+                        </div>
+                </div>
+            </div>
+
+<!--오른쪽 박스-->
+
+            <div id="text">
+                <h4>vasessdeco</h4>
+                <h3>미드센추리 모던 템바보드 원형 테이블</h3>
+                <p><del>448,000원</del></p>
+                
+
+                <div id="price"><h1>269,000</h1>
+                    <button class="coupon">쿠폰받기!</button>
+                
+                </div>
+                    
+
+<!--테이블1-->
+
+                <table class="table1">
+                    <tr>
+                        <td>배송비</td>
+                        <td>23,000원</td>
+                    </tr>
+
+                    <tr>
+                        <td>배송방법</td>
+                        <td>기사직접배송</td>
+                    </tr>
+
+                    <tr>
+                        <td>적립금</td>
+                        <td>2690원</td>
+                    </tr>
+
+                    <tr>
+                        <td>사이즈</td>
+                        <td>가로70 x 세로70 x 높이38.5cm</td>
+                    </tr>
+
+                    
+
+                    
+
+                </table>
+
+<!--테이블2 수량 컬러 선택 구간-->
+
+                <table class="table2">
+                    <tr>
+                        <td>수량</td>
+                        <td>
+                            <select name="select" id="select">
+                                <option>[필수]--수량을 선택해주세요</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                        </td>
+
+                    </tr>    
+
+                    <tr> 
+                        <td>컬러</td>
+                        <td>
+                            <select name="color" id="color">
+                                <option>[필수]--컬러를 선택해주세요</option>
+                                <option>Brown</option>
+                                <option>Light brown</option>
+                        </td>
+
+                        
+                    </tr>
+
+
+
+                </table>
+
+                <button class="bt1">바로구매</button>
+                <button class="bt2">장바구니</button>
+                <button class="bt3">위시리스트</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <br>
+
+<!--함께 보는 상품들-->>    
+
+    <div id="other">
+        <h2><q>이런 상품은 어떠세요?</q></h2>
+        <p>이 상품을 조회한 고객님들이 같이 조회한 상품</p>
+
+        <div class="other1">
+            <a href="#"><img src="img/other1.JPG" alt="other1"></a>
+            <p>홀로그램 거실 보조 테이블</p>
+            <p></p>
+        </div>
+        <div class="other1">
+            <a href="#"><img src="img/other2.JPG" alt="other2"></a>
+            <p>빈티지 인테리어소품</p>
+        </div>
+        <div class="other1">
+            <a href="#"><img src="img/other3.JPG" alt="other3"></a>
+            <p>원목짜임 거실테이블</p>
+        </div>
+        <div class="other1">
+            <a href="#"><img src="img/other4.JPG" alt="other4"></a>
+            <p>북유럽 극세사 소파베드</p>
+        </div>
+        <div class="other1">
+            <a href="#"><img src="img/other5.JPG" alt="other5"></a>
+            <p>고무나무 원목 스툴 보조의자</p>
+        </div>
+        
+    </div>
+
+    <br>
+
+    <div id="midmenu">
+        <ul>
+            <li>상세정보</li>
+            <li>상품후기(47)</li>
+            <li>배송/교환/반품</li>
+            <li>Q&A</li>
+        </ul>
+
+    </div>
+
+    <div class="section1"></div>
+
+    <div class="section2"></div>
+
+    <div class="section3"></div>
+
+    <div class="section4"></div>
+
+    <div class="section5"></div>
+    
+
+    <footer>
+        <div class="box">
+            <ul>
+                <li>대표자 : 홍민구</li>
+                <li>사업자 등록번호 : 314-86-39655</li>
+                <li> 통신판매업 신고번호 : 제2012-대전서구-0537호 [사업자정보확인]</li>
+                <li>주소 : 대전광역시 서구 계백로 1159 (가수원동) 바네스데코빌딩</li>
+                <li>물류센터 : 충청남도 논산시 연무읍 마봉로 69-1</li>
+                <li>고객센터 : 1599-4960</li>
+                <li> FAX : 042-581-5560</li>
+                <li>바네스데코(hi@vanessdeco.com)</li>
+
+            </ul>
+            <p>(주)브이디코랩은 관세법등 관련규정을 준수하고 불법물품을 취급하지 아니하며 분할배송에 의한 가격허위신고(15만원이하로 임의조정)등 구매자의 불법사항 요청에는 협조하지 않습니다.</p>
+
+        </div>
+        <p>Copyright © 2004 친환경 라이프스타일 바네스데코. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
